@@ -15,7 +15,6 @@ public class Card
      */
     public Card()
     {
-        // initialise instance variables
         x = 0;
     }
 

@@ -12,7 +12,7 @@
 
     (For more mathematically inclined, the SET deck corresponds to the 4-dimensional vector
     space over the algebraic field {0, 1, 2} with modulo 3 arithmetic.  Three cards form a "set"
-    if and only if the sum of the corresponding vectors is 0.)
+    if and only if the sum of the corresponding vectors is 0.) 
 
   - isZet and findZet are static methods.
 
@@ -24,5 +24,34 @@
 
 public class ZetAnalyzer
 {
-
+    public ZetAnalyzer()
+    {
+    }
+    public static boolean isZet(ZetCard card1, ZetCard card2, ZetCard card3)
+    {
+        boolean n,s,f,c;
+        boolean iset = false;
+        if ((card1.getNumber()==card2.getNumber())&&(card2.getNumber()==card3.getNumber()))
+            n = true;
+        else
+            n = false;
+        if ((card1.getShape()==card2.getShape())&&(card2.getShape()==card3.getShape()))
+            s = true;
+        else 
+            s = false;
+        if ((card1.getFill()==card2.getFill())&&(card2.geFill()==card3.getFill()))
+            f = true;
+        else
+            f = false;
+        if ((card1.getColor()==card2.getColor())&&(card2.getColor()==card3.getColor()))
+            c = true;
+        else 
+            c = false;
+        if ((n)&&(s)&&(f)&&(c))
+            iset = true;
+        return iset;
+    }
+    public static int[] findZet(ZetCard[] cards)
+    {
+    }
 }

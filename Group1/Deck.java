@@ -19,5 +19,41 @@ import java.util.*;
 
 public class Deck
 {
-
+    public Deck(){
+        
+    }
+    
+    public Deck(int capacity){
+        
+    }
+    
+    public int getNumCards(){
+        
+    }
+    
+    public boolean isEmpty(){
+        
+    }
+    
+    public void add(Card card){
+        
+    }
+    
+    public Card takeTop(){
+        
+    }
+    
+    public void shuffle(){
+        
+    }
+    
+    public void sort(){
+        
+    }
+    
+    public String toString(){
+        
+    }
+    
+    
 }

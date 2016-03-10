@@ -29,27 +29,6 @@ public class ZetAnalyzer
     }
     public static boolean isZet(ZetCard card1, ZetCard card2, ZetCard card3)
     {
-        boolean n,s,f,c;
-        boolean iset = false;
-        if ((card1.getNumber()==card2.getNumber())&&(card2.getNumber()==card3.getNumber()))
-            n = true;
-        else
-            n = false;
-        if ((card1.getShape()==card2.getShape())&&(card2.getShape()==card3.getShape()))
-            s = true;
-        else 
-            s = false;
-        if ((card1.getFill()==card2.getFill())&&(card2.geFill()==card3.getFill()))
-            f = true;
-        else
-            f = false;
-        if ((card1.getColor()==card2.getColor())&&(card2.getColor()==card3.getColor()))
-            c = true;
-        else 
-            c = false;
-        if ((n)&&(s)&&(f)&&(c))
-            iset = true;
-        return iset;
     }
     public static int[] findZet(ZetCard[] cards)
     {

@@ -43,7 +43,7 @@ public class TestZetAnalyzer
     @Test
     public void testIsZetTrue()
     {
-        
+       
     }
     @Test
     public void testIsZetFalse()

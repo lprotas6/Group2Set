@@ -39,4 +39,10 @@ public class TestZetAnalyzer
     public void tearDown()
     {
     }
+    
+    @Test
+    public void testIsZet()
+    {
+        
+    }
 }

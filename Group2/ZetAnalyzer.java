@@ -29,6 +29,7 @@ public class ZetAnalyzer
     }
     public static boolean isZet(ZetCard card1, ZetCard card2, ZetCard card3)
     {
+        
     }
     public static int[] findZet(ZetCard[] cards)
     {

@@ -12,7 +12,7 @@
 
     (For more mathematically inclined, the SET deck corresponds to the 4-dimensional vector
     space over the algebraic field {0, 1, 2} with modulo 3 arithmetic.  Three cards form a "set"
-    if and only if the sum of the corresponding vectors is 0.)
+    if and only if the sum of the corresponding vectors is 0.) 
 
   - isZet and findZet are static methods.
 

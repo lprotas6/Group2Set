@@ -6,12 +6,12 @@ public class ZetCard extends Card
     int shape; //1 for oval, 2 for squiggle, 3 for diamond
     int fill; //1 for empth, 2 for soild, 3 for striped
     int color; //1 for red, 2 for green, 3 for blue
-    int id; //ID is a unique number that only the card with that particular
+    //ID is a unique number that only the card with that particular
                 //combination of traits has
     String tostring;
     
     
-    int[][][][] idArray = new int[3][3][3][3];
+    int[][] idArray = new int[3][3];
     
     
     public ZetCard(int userNumber, int userShape, int userFill, int userColor)

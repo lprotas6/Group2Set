@@ -57,6 +57,13 @@ public class ZetAnalyzer
     }
     public static int[] findZet(ZetCard[] cards)
     {
-        
+        ZetCard[] zetar = new ZetCard [3];
+        while (zetar[2] != null)
+        {
+        }
+        for (int i = 0; i<3; i++)
+            if (zetar[i] == null)
+                zetar = null;
+        return zetar;
     }
 }

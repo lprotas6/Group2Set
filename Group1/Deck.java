@@ -19,28 +19,39 @@ import java.util.*;
 
 public class Deck extends Card
 {
+    Stack<Card> stack;
     public Deck(){
+        
+         stack = new Stack<Card>();
         
     }
     
     public Deck(int capacity){
         
+        stack = new Stack<Card>();
+        
     }
     
     public int getNumCards(){
-        
+        return stack.size();
     }
     
     public boolean isEmpty(){
-        
+        if(stack.empty()==true){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     
     public void add(Card card){
-        
+        stack.push(card);
     }
     
     public Card takeTop(){
-        
+        stack.pop();
+        return stack.peek();
     }
     
     public void shuffle(){
@@ -52,7 +63,7 @@ public class Deck extends Card
     }
     
     public String toString(){
-        
+        return "HELLO";
     }
     
     

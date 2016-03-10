@@ -43,10 +43,15 @@ public class TestZetAnalyzer
     @Test
     public void testIsZetTrue()
     {
-        
+        assertEquals(true,ZetAnalyzer.isZet(ZetCard(1,1,2,3),ZetCard(1,2,3,1),ZetCard(1,3,1,2)));
     }
     @Test
     public void testIsZetFalse()
+    {
+        assertEquals(true,ZetAnalyzer.isZet(ZetCard(2,1,2,3),ZetCard(1,2,3,1),ZetCard(1,3,1,2)));
+    }
+    @Test
+    public void testFindZet()
     {
         
     }

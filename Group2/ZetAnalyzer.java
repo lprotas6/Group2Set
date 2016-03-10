@@ -48,10 +48,15 @@ public class ZetAnalyzer
         else 
             c = false;
         if ((n)&&(s)&&(f)&&(c))
+        {
             iset = true;
+            if ((card1==card2)||(card2==card3)||(card3==card2))
+                iset = false;
+        }
         return iset;
     }
     public static int[] findZet(ZetCard[] cards)
     {
+        
     }
 }

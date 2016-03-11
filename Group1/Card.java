@@ -26,7 +26,7 @@ public class Card implements Comparable<Card>
 
     public int compareTo(Card other)
     {
-        if (super.equals(other))
+        if (getId() == other.getId())
         {
             return 0;
         }
@@ -44,6 +44,4 @@ public class Card implements Comparable<Card>
     {
          return Integer.toString(getId());
     }
-
-    
 }

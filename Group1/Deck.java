@@ -19,21 +19,21 @@ import java.util.*;
 
 public class Deck extends Card
 {
-    Stack<Card> stack;
+    ArrayList<Card> deque;
     public Deck(){
         
-         stack = new Stack<Card>();
+        deque = new ArrayList<Card>();
         
     }
     
     public Deck(int capacity){
         
-        stack = new Stack<Card>();
+        deque = new ArrayList<Card>(capacity);
         
     }
     
     public int getNumCards(){
-        return stack.size();
+        return deque.size();
     }
     
     public boolean isEmpty(){

@@ -51,14 +51,27 @@ public class ZetAnalyzer
         {
             iset = true;
             if (card1.equals(card2)||card2.equals(card3)||card3.equals(card1))
-            {
                 iset = false;
-            }
         }
         return iset;
     }
     public static int[] findZet(ZetCard[] cards)
     {
-        
+        ZetCard[] zetar = new ZetCard [3];
+        for (int i = 0; i<cards.length(); i++)
+        {
+            zetar[1] = cards[i];
+            for (int k = 0; k<cards.length(); k++)
+            {
+                zetar[2] = cards[k];
+                for(int c = 0; c<cards.length(); c++)
+                {
+                    zetar[3] = cards[c];
+                    if (isZet(zetar[1],zetar[2],zetar[3]))
+                        return zetar;
+                }
+            }
+        }
+        return null;
     }
 }

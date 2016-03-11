@@ -57,17 +57,17 @@ public class ZetAnalyzer
     }
     public static int[] findZet(ZetCard[] cards)
     {
-        ZetCard[] zetar = new ZetCard [3];
-        for (int i = 0; i<cards.length(); i++)
+        int[] zetar = new int[3];
+        for (int i = 0; i<cards.length; i++)
         {
-            zetar[1] = cards[i];
-            for (int k = 0; k<cards.length(); k++)
+            zetar[1] =i;
+            for (int k = 0; k<cards.length; k++)
             {
-                zetar[2] = cards[k];
-                for(int c = 0; c<cards.length(); c++)
+                zetar[2] = k;
+                for(int c = 0; c<cards.length; c++)
                 {
-                    zetar[3] = cards[c];
-                    if (isZet(zetar[1],zetar[2],zetar[3]))
+                    zetar[3] =c;
+                    if (isZet(cards[i],cards[k],cards[c]))
                         return zetar;
                 }
             }

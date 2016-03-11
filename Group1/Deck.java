@@ -17,7 +17,7 @@
 
 import java.util.*;
 
-public class Deck
+public class Deck extends Card
 {
     Stack<Card> stack;
     public Deck(){

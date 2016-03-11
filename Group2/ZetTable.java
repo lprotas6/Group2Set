@@ -131,6 +131,12 @@ public class ZetTable
      */
     public String toString()
     {
-        
+        String s;
+        for (ZetCard wow:openCards)
+        {
+            s+=wow.toString + "\n";
+        }
+        s+="Number of cards: " + numOpenCards;
+        return s;
     }
 }

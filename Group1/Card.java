@@ -2,7 +2,7 @@ public class Card implements Comparable<Card>
 {
     private int Id;
     
-    public Card(int id)
+    public void Card(int id)
     {
         Id = id;
     }

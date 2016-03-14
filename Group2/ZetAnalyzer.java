@@ -50,7 +50,7 @@ public class ZetAnalyzer
         if (((n)&&(s))&&((f)&&(c)))
         {
             iset = true;
-            if (card1.equals(card2)||card2.equals(card3)||card3.equals(card1))
+            if ((card1.equals(card2))||(card2.equals(card3))||(card3.equals(card1)))
                 iset = false;
         }
         return iset;

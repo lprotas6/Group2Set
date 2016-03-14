@@ -50,7 +50,10 @@ public class ZetTable
      */
     public ZetTable()
     {
-        
+       for (int x=0; x<=3; x++) {
+        open3Cards();
+    }
+    numOpenCards = 12;
     }
 
     /**
@@ -70,7 +73,11 @@ public class ZetTable
      */
     public ZetCard getOpenCard(int i)
     {
-        
+        if (i<20 && i>=0)
+             return openCards[i];
+        else {
+            return null;
+        }  
     }
 
     /**
@@ -101,7 +108,19 @@ public class ZetTable
      */
     public boolean open3Cards()
     {
-        
+        if (numOpenCards>=18)
+        return false;
+    else {
+        int ctr = 0;
+        for (int x = 0; x<=19; x++) {
+            if (openCards[x]==null && ctr<3) {
+                openCards[x] = deck.takeTop();
+                numOpenCards++;
+                ctr++;
+            }
+        }        
+        return true;
+     }
     }
 
     /**
@@ -110,7 +129,10 @@ public class ZetTable
      */
     public void remove3Cards(int[] indices)
     {
-        
+        openCards[indices[0]] = null;
+        openCards[indices[1]] = null;
+        openCards[indices[2]] = null;
+        compactOpenCards();
     }
 
     /**
@@ -120,7 +142,28 @@ public class ZetTable
     public void compactOpenCards()
     {
         // Partitioning algorithm (proceed from both ends):
-        
+        int[] emptySlots = new int[20];
+        int count = 0;
+        for (ZetCard eachCard: openCards)
+        {
+            if (eachCard == null)
+            {
+                emptySlots[count] = 1;
+                count++;
+            }
+        }
+        for (int i = dfltOpenCards; i < openCards; i++)
+        {
+            for (int wq: emptySlots)
+            {
+                if (wq == 1)
+                {
+                    {
+                        
+                    }
+                }
+            }
+        }
     }
 
     /**

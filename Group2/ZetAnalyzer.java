@@ -31,19 +31,19 @@ public class ZetAnalyzer
     {
         boolean n,s,f,c;
         boolean iset = false;
-        if (card1.getNumber()+card2.getNumber()+card3.getNumber()%3 == 0)
+        if ((card1.getNumber()+card2.getNumber()+card3.getNumber())%3 == 0)
             n = true;
         else
             n = false;
-        if (card1.getShape()+card2.getShape()+card3.getShape()%3 == 0)
+        if ((card1.getShape()+card2.getShape()+card3.getShape())%3 == 0)
             s = true;
         else 
             s = false;
-        if (card1.getFill()+card2.getFill()+card3.getFill()%3 == 0)
+        if ((card1.getFill()+card2.getFill()+card3.getFill())%3 == 0)
             f = true;
         else
             f = false;
-        if (card1.getColor()+card2.getColor()+card3.getColor()%3==0)
+        if ((card1.getColor()+card2.getColor()+card3.getColor())%3==0)
             c = true;
         else 
             c = false;

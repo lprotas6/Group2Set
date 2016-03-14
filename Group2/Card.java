@@ -1,8 +1,9 @@
 public class Card implements Comparable<Card>
 {
     private int Id;
-    public void Card(int newid)
+    
 
+    public Card(int newid)
     {
         Id = newid;
     }

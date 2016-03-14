@@ -26,7 +26,6 @@ public class ZetCard extends Card
     public int getNumber()
     {
         return number;
-        
     }
     
     public int getShape()

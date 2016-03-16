@@ -53,6 +53,8 @@ public class TestZetAnalyzer
     @Test
     public void testFindZet()
     {
-        
+        ZetCard[] cards={(new ZetCard(1,1,1,1)),(new ZetCard(1,1,1,2)),(new ZetCard(2,1,1,1)),(new ZetCard(1,1,1,3))};
+        int[] test=ZetAnalyzer.findZet(cards);
+        assertEquals(4,test[2]);
     }
 }

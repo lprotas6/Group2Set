@@ -3,12 +3,10 @@ public class Card implements Comparable<Card>
     private int Id;
     
 
-<<<<<<< HEAD
-    public void Card(int id)
-=======
+
+ 
     public Card(int newid)
 
->>>>>>> 9e0a79610d7a089a9a3ea96ef5a2bc69ccfde57a
 
     {
         Id = id;

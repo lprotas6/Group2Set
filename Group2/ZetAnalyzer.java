@@ -31,43 +31,43 @@ public class ZetAnalyzer
     {
         boolean n,s,f,c;
         boolean iset = false;
-        if (card1.getNumber()+card2.getNumber()+card3.getNumber()%3 == 0)
+        if ((card1.getNumber()+card2.getNumber()+card3.getNumber())%3 == 0)
             n = true;
         else
             n = false;
-        if (card1.getShape()+card2.getShape()+card3.getShape()%3 == 0)
+        if ((card1.getShape()+card2.getShape()+card3.getShape())%3 == 0)
             s = true;
         else 
             s = false;
-        if (card1.getFill()+card2.getFill()+card3.getFill()%3 == 0)
+        if ((card1.getFill()+card2.getFill()+card3.getFill())%3 == 0)
             f = true;
         else
             f = false;
-        if (card1.getColor()+card2.getColor()+card3.getColor()%3==0)
+        if ((card1.getColor()+card2.getColor()+card3.getColor())%3==0)
             c = true;
         else 
             c = false;
-        if ((n)&&(s)&&(f)&&(c))
+        if (((n)&&(s))&&((f)&&(c)))
         {
             iset = true;
-            if (card1.equals(card2)||card2.equals(card3)||card3.equals(card1))
+            if ((card1.equals(card2))||(card2.equals(card3))||(card3.equals(card1)))
                 iset = false;
         }
         return iset;
     }
     public static int[] findZet(ZetCard[] cards)
     {
-        ZetCard[] zetar = new ZetCard [3];
-        for (int i = 0; i<cards.length(); i++)
+        int[] zetar = new int[3];
+        for (int i = 0; i<cards.length; i++)
         {
-            zetar[1] = cards[i];
-            for (int k = 0; k<cards.length(); k++)
+            zetar[1] =i;
+            for (int k = 0; k<cards.length; k++)
             {
-                zetar[2] = cards[k];
-                for(int c = 0; c<cards.length(); c++)
+                zetar[2] = k;
+                for(int c = 0; c<cards.length; c++)
                 {
-                    zetar[3] = cards[c];
-                    if (isZet(zetar[1],zetar[2],zetar[3]))
+                    zetar[3] =c;
+                    if (isZet(cards[i],cards[k],cards[c]))
                         return zetar;
                 }
             }

@@ -17,11 +17,11 @@ to sort and a similar algorithm to shuffle.  Use Math.random().
 
 import java.util.*;
 
-public class Deck
+public class Deck extends Card
 {
     ArrayList<Card> deque;
     String something;
-
+    Card card=new Card();
     public Deck(){
 
         deque = new ArrayList<Card>();

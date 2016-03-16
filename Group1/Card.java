@@ -3,11 +3,13 @@ public class Card implements Comparable<Card>
     private int Id;
     
 
+
+ 
     public Card(int newid)
 
 
     {
-        Id = newid;
+        Id = id;
     }
 
     public int getId()

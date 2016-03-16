@@ -60,13 +60,13 @@ public class ZetAnalyzer
         int[] zetar = new int[3];
         for (int i = 0; i<cards.length; i++)
         {
-            zetar[1] =i;
+            zetar[0] =i;
             for (int k = 0; k<cards.length; k++)
             {
-                zetar[2] = k;
+                zetar[1] = k;
                 for(int c = 0; c<cards.length; c++)
                 {
-                    zetar[3] =c;
+                    zetar[2] =c;
                     if (isZet(cards[i],cards[k],cards[c]))
                         return zetar;
                 }

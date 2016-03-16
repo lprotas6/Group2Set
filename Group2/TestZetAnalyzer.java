@@ -51,8 +51,17 @@ public class TestZetAnalyzer
         assertEquals(false,ZetAnalyzer.isZet((new ZetCard(2,1,2,3)),(new ZetCard(1,2,3,1)),(new ZetCard(1,3,1,2))));
     }
     @Test
-    public void testFindZet()
+    public void testFindZetNumber()
     {
-        
+        ZetCard[] cards={(new ZetCard(1,1,1,1)),(new ZetCard(1,1,1,2)),(new ZetCard(2,1,1,1)),(new ZetCard(1,1,1,3))};
+        int[] test=ZetAnalyzer.findZet(cards);
+        assertEquals(3,test[2]);
+    }
+     @Test
+    public void testFindZetNull()
+    {
+        ZetCard[] cards={(new ZetCard(1,1,1,1)),(new ZetCard(1,1,1,2)),(new ZetCard(2,1,1,1)),(new ZetCard(1,1,2,3))};
+        int[] test=ZetAnalyzer.findZet(cards);
+        assertEquals(null,test);
     }
 }

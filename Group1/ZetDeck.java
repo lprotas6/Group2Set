@@ -1,33 +1,34 @@
-
+import java.util.*;
 /**
  * Write a description of class ZetDeck here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ZetDeck 
+public class ZetDeck extends Deck
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    ArrayList<ZetCard> zetDeque;
     /**
      * Constructor for objects of class ZetDeck
      */
     public ZetDeck()
     {
-        // initialise instance variables
-        x = 0;
+        //create a deck with every unique combination of ZetCards
+        super();
+        zetDeque= new ArrayList<ZetCard>();
+        //for loop to go through each number
+        for (int number=1; number<4; number++){
+            //for loop to go through each shape
+            for (int shape=1; shape<4; shape++){
+                //for loop to go through each fill
+                for (int fill=1; fill<4; fill++){
+                    //for loop to go through each color
+                    for (int color=1; color<4; color++){
+                        //add a ZetCard with your 4 parameters
+                        zetDeque.add(new ZetCard(number, shape, fill, color));
+                    }
+                }
+            }
+        }
+        }
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
-}

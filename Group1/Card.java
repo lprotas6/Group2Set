@@ -2,7 +2,9 @@ public class Card implements Comparable<Card>
 {
     private int Id;
     
+
     public void Card(int id)
+
     {
         Id = id;
     }

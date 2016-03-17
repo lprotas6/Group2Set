@@ -52,28 +52,18 @@ public class Deck
     }
 
     public Card takeTop(){
-        //Card card1= new Card();
-        //card1=deque.get(
+        
         return deque.remove(deque.size()-1);
 
     }
 
     public void shuffle(){
-        //for(i=0;i<deque.size()-1;i++){
-        // Math.random()*(deque.size()-1)
-        //}
+        
         Collections.shuffle(deque);
     }
 
     public void sort(){
-        //         for(int i=0;i<deque.size();i++){
-        //             if(deque.get(i).compareTo(deque.get(i+1))==1){
-        //             }
-        //             else if(deque.get(i).compareTo(deque.get(i+1))==-1){
-        //             }
-        //             else{
-        //             }
-        //         }
+     
         Collections.sort(deque);
     }
 

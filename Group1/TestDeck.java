@@ -56,9 +56,7 @@ public class TestDeck extends Deck
         d2.add(c2);
         d2.add(c3);
         d.shuffle();
-        boolean shuffleWorks;
-        shuffleWorks = d2.toString().equals(d.toString());
-        assertFalse(shuffleWorks);
+        assertEquals("This test should fail.....",d,d2);
     }
     
     @Test
@@ -89,8 +87,11 @@ public class TestDeck extends Deck
         Card c1 = new Card(7);
         Card c2 = new Card(83);
         Card c3 = new Card(946);
-        int[] correctIds = {7, 83, 946};
+        int[] correctIds = {946, 83, 7};
         int[] addedIds = new int[3];
+        d.add(c1);
+        d.add(c2);
+        d.add(c3);
         addedIds[0] = d.takeTop().getId();
         addedIds[1] = d.takeTop().getId();
         addedIds[2] = d.takeTop().getId();

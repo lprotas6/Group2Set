@@ -20,7 +20,7 @@ import java.util.*;
 public class Deck
 {
     ArrayList<Card> deque;
-    String something;
+    String something="";
 
     public Deck(){
 

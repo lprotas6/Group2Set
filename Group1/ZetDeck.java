@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class ZetDeck extends Deck
 {
-    ArrayList<ZetCard> zetDeque;
+    ArrayList<ZetCard> zetDeque; 
     /**
      * Constructor for objects of class ZetDeck
      */
@@ -15,7 +15,7 @@ public class ZetDeck extends Deck
     {
         //create a deck with every unique combination of ZetCards
         super();
-        zetDeque= new ArrayList<ZetCard>();
+        zetDeque=new  ArrayList<ZetCard>(81);
         //for loop to go through each number
         for (int number=1; number<4; number++){
             //for loop to go through each shape

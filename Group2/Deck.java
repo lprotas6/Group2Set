@@ -33,7 +33,11 @@ public class Deck
         deque = new ArrayList<Card>(capacity);
 
     }
-
+    
+    public Deck(ArrayList<Card> newDeck){
+        deque=newDeck;
+    }
+    
     public int getNumCards(){
         return deque.size();
     }
@@ -52,9 +56,14 @@ public class Deck
     }
 
     public Card takeTop(){
-        
-        return deque.remove(deque.size()-1);
-
+        if (!isEmpty())
+        {
+            return deque.remove(deque.size()-1);
+        }
+        else
+        {
+            return null;
+        }
     }
 
     public void shuffle(){

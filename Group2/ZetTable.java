@@ -44,7 +44,7 @@ public class ZetTable
     private final int dfltOpenCards = 12;
     private int numOpenCards = 0;
     private ZetCard[] openCards = new ZetCard[20];
-    private Deck deck = new Deck();
+    private ZetDeck deck = new ZetDeck();
 
     /**
      *  Creates a new deck and opens dfltOpenCards cards.
@@ -63,7 +63,7 @@ public class ZetTable
      */
     public int cardsInDeck()
     {
-        return numOpenCards;
+        return deck.getNumCards();
     }
 
     /**

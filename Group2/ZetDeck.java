@@ -14,7 +14,7 @@ public class ZetDeck extends Deck
     public ZetDeck()
     {
         //create a deck with every unique combination of ZetCards
-        super();
+        
         zetDeque=new  ArrayList<ZetCard>(81);
         //for loop to go through each number
         for (int number=1; number<4; number++){
@@ -30,5 +30,6 @@ public class ZetDeck extends Deck
                 }
             }
         }
+        super(zetDeque);
         }
     }

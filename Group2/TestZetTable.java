@@ -17,7 +17,7 @@ public class TestZetTable
             {
                 if (table.open3Cards())
                 {
-                    System.out.println(table);
+                    System.out.println(table.toString());
                 }
                 else
                 {
@@ -27,6 +27,7 @@ public class TestZetTable
             else
             {
                 table.remove3Cards(indices);
+                System.out.println(table.toString());
                 if (!table.enoughOpen())
                 {
                     if (!table.open3Cards())

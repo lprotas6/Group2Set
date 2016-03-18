@@ -20,7 +20,7 @@ import java.util.*;
 public class Deck
 {
     ArrayList<Card> deque;
-    String something="";
+   
 
     public Deck(){
 
@@ -68,11 +68,14 @@ public class Deck
     }
 
     public String toString(){
+        String deckString="";
         for (int i = 0; i<deque.size(); i++)
         {
-            something += takeTop() + "\n";
+            System.out.println("a");
+            deckString+=deque.get(i).toString()+"\n";
+            //takeTop().toString()+"\n";
         }
-        return something;
+        return deckString;
     }
 
 }

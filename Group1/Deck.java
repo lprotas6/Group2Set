@@ -52,9 +52,14 @@ public class Deck
     }
 
     public Card takeTop(){
-        
-        return deque.remove(deque.size()-1);
-
+        if (!isEmpty())
+        {
+            return deque.remove(deque.size()-1);
+        }
+        else
+        {
+            return null;
+        }
     }
 
     public void shuffle(){

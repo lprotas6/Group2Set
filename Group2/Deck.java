@@ -17,11 +17,11 @@ to sort and a similar algorithm to shuffle.  Use Math.random().
 
 import java.util.*;
 
-public class Deck extends Card
+public class Deck
 {
     ArrayList<Card> deque;
-    String something;
-    Card card=new Card();
+    String something="";
+
     public Deck(){
 
         deque = new ArrayList<Card>();
@@ -52,28 +52,18 @@ public class Deck extends Card
     }
 
     public Card takeTop(){
-        //Card card1= new Card();
-        //card1=deque.get(
+        
         return deque.remove(deque.size()-1);
 
     }
 
     public void shuffle(){
-        //for(i=0;i<deque.size()-1;i++){
-        // Math.random()*(deque.size()-1)
-        //}
+        
         Collections.shuffle(deque);
     }
 
     public void sort(){
-        //         for(int i=0;i<deque.size();i++){
-        //             if(deque.get(i).compareTo(deque.get(i+1))==1){
-        //             }
-        //             else if(deque.get(i).compareTo(deque.get(i+1))==-1){
-        //             }
-        //             else{
-        //             }
-        //         }
+     
         Collections.sort(deque);
     }
 

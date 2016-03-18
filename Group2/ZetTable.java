@@ -1,7 +1,7 @@
 /**
  *  Represents a card table with a deck and an array of open cards for the game of Set.
  */
-
+import java.util.*;
 /*
 
 Tips:
@@ -44,13 +44,14 @@ public class ZetTable
     private final int dfltOpenCards = 12;
     private int numOpenCards = 0;
     private ZetCard[] openCards = new ZetCard[20];
+    private Deck deck = new Deck();
 
     /**
      *  Creates a new deck and opens dfltOpenCards cards.
      */
     public ZetTable()
     {
-        for (int x=0; x<=3; x++) {
+        for (int x=0;x<=3;x++) {
             open3Cards();
         }
         numOpenCards = 12;
@@ -77,7 +78,7 @@ public class ZetTable
             return openCards[i];
         else {
             return null;
-        }  
+        }              
     }
 
     /**
@@ -99,7 +100,7 @@ public class ZetTable
      */
     public int[] findZet()
     {
-
+        return ZetAnalyzer.findZet(openCards);
     }
 
     /**
@@ -114,7 +115,7 @@ public class ZetTable
             int ctr = 0;
             for (int x = 0; x<=19; x++) {
                 if (openCards[x]==null && ctr<3) {
-                    openCards[x] = deck.takeTop();
+                    openCards[x] = (ZetCard)(deck.takeTop());
                     numOpenCards++;
                     ctr++;
                 }
@@ -142,28 +143,46 @@ public class ZetTable
     public void compactOpenCards()
     {
         // Partitioning algorithm (proceed from both ends):
-        int[] emptySlots = new int[20];
+        int size = 0;
+        LinkedList<Integer> emptyIndices = new LinkedList<Integer>();
+        for (int x = 0; x < dfltOpenCards; x++) {
+            if (openCards[x]==null)
+                emptyIndices.add(x);
+        }
+        ListIterator iter = emptyIndices.listIterator();
+        size = emptyIndices.size();
         int count = 0;
-        for (ZetCard eachCard: openCards)
-        {
-            if (eachCard == null)
-            {
-                emptySlots[count] = 1;
+        for (int x = 19; x <= dfltOpenCards; x--) {
+            if (openCards[x]!=null && count<size) {
+                int ind = (int)(iter.next());
+                openCards[ind]=openCards[x];
+                openCards[x]=null;
                 count++;
             }
         }
-        for (int i = dfltOpenCards; i < openCards; i++)
-        {
-            for (int wq: emptySlots)
-            {
-                if (wq == 1)
-                {
-                    {
 
-                    }
-                }
-            }
-        }
+        //         int[] emptySlots = new int[20];
+        //         int count = 0;
+        // //         for (ZetCard eachCard: openCards)
+        // //         {
+        // //             if (eachCard == null)
+        // //             {
+        // //                 emptySlots[count] = 1;
+        // //                 count++;
+        // //             }
+        // //         }
+        // // //         for (int i = dfltOpenCards; i < openCards; i++)
+        // // //         {
+        // // //             for (int wq: emptySlots)
+        // // //             {
+        // // //                 if (wq == 1)
+        // // //                 {
+        // // //                     {
+        // // // 
+        // // //                     }
+        // // //                 }
+        // // //             }
+        // // //         }
     }
 
     /**
@@ -174,10 +193,10 @@ public class ZetTable
      */
     public String toString()
     {
-        String s;
+        String s = "";
         for (ZetCard wow:openCards)
         {
-            s+=wow.toString + "\n";
+            s+=wow.toString() + "\n";
         }
         s+="Number of cards: " + numOpenCards;
         return s;

@@ -13,10 +13,7 @@ public class ZetDeck extends Deck
      */
     public ZetDeck()
     {
-        //create a deck with every unique combination of ZetCards
-        super();
-        zetDeque=new  ArrayList<ZetCard>(81);
-        //for loop to go through each number
+        super(81);
         for (int number=1; number<4; number++){
             //for loop to go through each shape
             for (int shape=1; shape<4; shape++){
@@ -25,7 +22,7 @@ public class ZetDeck extends Deck
                     //for loop to go through each color
                     for (int color=1; color<4; color++){
                         //add a ZetCard with your 4 parameters
-                        zetDeque.add(new ZetCard(number, shape, fill, color));
+                        add(new ZetCard(number, shape, fill, color));
                     }
                 }
             }

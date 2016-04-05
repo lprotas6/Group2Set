@@ -51,6 +51,7 @@ public class ZetTable
      */
     public ZetTable()
     {
+        deck.shuffle();
         for (int x=0;x<=3;x++) {
             open3Cards();
         }

@@ -10,6 +10,7 @@ public class TestZetTable
     public static void main (String[] args)
     {
         ZetTable table = new ZetTable();
+        System.out.println(table.cardsInDeck());
         while (table.cardsInDeck() != 0)
         {
             int[] indices = table.findZet();

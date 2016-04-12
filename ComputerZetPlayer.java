@@ -7,7 +7,7 @@
  *  Teachers may make a limited number of copies of this file
  *  for noncommercial, face-to-face teaching purposes.
  *
- *  SET® is a registered trademark of SET Enterprises, Inc.
+ *  SETï¿½ is a registered trademark of SET Enterprises, Inc.
  *
  */
 
@@ -26,7 +26,7 @@ public class ComputerZetPlayer extends JPanel
   private final JTextField scoreField;
   private final JButton zetButton;
 
-  private static final int AVG_DELAY = 30000;
+  private static final int AVG_DELAY = 15000;
   private int delay;
   private final JSlider speedSlider;
   private Timer clock1, clock2;

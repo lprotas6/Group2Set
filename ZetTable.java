@@ -88,10 +88,7 @@ public class ZetTable
      */
     public boolean enoughOpen()
     {
-        if (numOpenCards >= dfltOpenCards)
-            return true;
-        else
-            return false;
+        return (numOpenCards >= dfltOpenCards);
     }
 
     /**
@@ -110,19 +107,17 @@ public class ZetTable
      */
     public boolean open3Cards()
     {
-        if (numOpenCards>=18)
-            return false;
-        else {
-            int ctr = 0;
-            for (int x = 0; x<=19; x++) {
-                if (openCards[x]==null && ctr<3) {
-                    openCards[x] = (ZetCard)(deck.takeTop());
-                    numOpenCards++;
-                    ctr++;
-                }
-            }        
-            return true;
+        if(deck.getNumCards() < 3) return false;
+        int opened = 0;
+        for(int i = 0; i < openCards.length && opened < 3; i++)
+        {
+            if(openCards[i] == null)
+            {
+                openCards[i] = (ZetCard) deck.takeTop();
+                opened++;
+            }
         }
+        return opened == 3;
     }
 
     /**
@@ -176,7 +171,7 @@ public class ZetTable
         // // //         {
         // // //             for (int wq: emptySlots)
         // // //             {
-        // // //                 if (wq == 1)
+        // // //                 if (wq == 1)      
         // // //                 {
         // // //                     {
         // // // 

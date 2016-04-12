@@ -31,6 +31,8 @@ public class ZetAnalyzer
     {
         boolean n,s,f,c;
         boolean iset = false;
+        if (card1!=null &&card2!=null &&card3!=null)
+    {
         if ((card1.getNumber()+card2.getNumber()+card3.getNumber())%3 == 0)
             n = true;
         else
@@ -53,6 +55,7 @@ public class ZetAnalyzer
             if ((card1.equals(card2))||(card2.equals(card3))||(card3.equals(card1)))
                 iset = false;
         }
+    }
         return iset;
     }
     public static int[] findZet(ZetCard[] cards)
